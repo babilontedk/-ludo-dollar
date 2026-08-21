@@ -1,0 +1,72 @@
+# Environment variables
+.env
+.env.local
+.env.*.local
+.env.example.local
+
+# Backend
+backend/node_modules/
+backend/dist/
+backend/.DS_Store
+backend/*.log
+backend/npm-debug.log*
+backend/yarn-debug.log*
+backend/yarn-error.log*
+backend/.idea/
+backend/.vscode/
+backend/build/
+
+# Mobile (Flutter)
+mobile/build/
+mobile/.dart_tool/
+mobile/.flutter-plugins
+mobile/.flutter-plugins-dependencies
+mobile/.packages
+mobile/.pub-cache/
+mobile/pubspec.lock
+mobile/coverage/
+mobile/.idea/
+mobile/.vscode/
+mobile/*.iml
+mobile/*.ipr
+mobile/*.iws
+mobile/.gradle/
+mobile/local.properties
+mobile/.DS_Store
+mobile/android/local.properties
+mobile/android/.gradle/
+mobile/android/build/
+mobile/android/app/debug/
+mobile/android/app/profile/
+mobile/android/app/release/
+mobile/ios/Flutter/Flutter.framework/
+mobile/ios/Flutter/Flutter.podspec
+mobile/ios/Flutter/flutter_export_environment.sh
+mobile/ios/Pods/
+mobile/ios/Podfile.lock
+mobile/ios/.symlinks/
+
+# Database
+database/*.sql.bak
+database/backup/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.sublime-project
+.sublime-workspace
+
+# Logs
+*.log
+logs/
+
+# Generated files
+.generated/
+generated/
