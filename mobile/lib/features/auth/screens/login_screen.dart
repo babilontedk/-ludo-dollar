@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:dio/dio.dart';
-import '../config/theme.dart';
-import '../core/api_client.dart';
+import '../../../config/theme.dart';
+import '../../../core/api_client.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({Key? key}) : super(key: key);
@@ -47,8 +47,6 @@ class _LoginScreenState extends State<LoginScreen> {
         ApiClient().setAuthToken(token);
         
         if (mounted) {
-          // Navigate to home
-          // context.go('/home');
           ScaffoldMessenger.of(context).showSnackBar(
             const SnackBar(content: Text('Login successful!')),
           );
@@ -99,7 +97,6 @@ class _LoginScreenState extends State<LoginScreen> {
                 ),
               ),
             if (_errorMessage.isNotEmpty) SizedBox(height: 20.h),
-            // Email Field
             Text('Email', style: TextStyle(fontSize: 14.sp, fontWeight: FontWeight.w600)),
             SizedBox(height: 8.h),
             TextField(
@@ -111,7 +108,6 @@ class _LoginScreenState extends State<LoginScreen> {
               keyboardType: TextInputType.emailAddress,
             ),
             SizedBox(height: 24.h),
-            // Password Field
             Text('Password', style: TextStyle(fontSize: 14.sp, fontWeight: FontWeight.w600)),
             SizedBox(height: 8.h),
             TextField(
@@ -133,9 +129,7 @@ class _LoginScreenState extends State<LoginScreen> {
             Align(
               alignment: Alignment.centerRight,
               child: TextButton(
-                onPressed: () {
-                  // Navigate to forgot password
-                },
+                onPressed: () {},
                 child: Text(
                   'Forgot Password?',
                   style: TextStyle(color: AppColors.primary, fontSize: 14.sp),
@@ -143,7 +137,6 @@ class _LoginScreenState extends State<LoginScreen> {
               ),
             ),
             SizedBox(height: 32.h),
-            // Login Button
             SizedBox(
               width: double.infinity,
               child: ElevatedButton(
@@ -158,7 +151,6 @@ class _LoginScreenState extends State<LoginScreen> {
               ),
             ),
             SizedBox(height: 24.h),
-            // Sign Up Link
             Center(
               child: RichText(
                 text: TextSpan(
@@ -172,14 +164,12 @@ class _LoginScreenState extends State<LoginScreen> {
                         fontWeight: FontWeight.w600,
                         fontSize: 14.sp,
                       ),
-                      recognizer: null, // Add gesture handler
                     ),
                   ],
                 ),
               ),
             ),
             SizedBox(height: 20.h),
-            // Demo Account Info
             Container(
               padding: EdgeInsets.all(12.w),
               decoration: BoxDecoration(

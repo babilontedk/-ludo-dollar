@@ -26,7 +26,6 @@ class _WalletScreenState extends State<WalletScreen> {
         padding: EdgeInsets.symmetric(horizontal: 20.w, vertical: 20.h),
         child: Column(
           children: [
-            // Wallet Balance Card
             Container(
               padding: EdgeInsets.all(24.w),
               decoration: BoxDecoration(
@@ -60,7 +59,6 @@ class _WalletScreenState extends State<WalletScreen> {
                     ),
                   ),
                   SizedBox(height: 20.h),
-                  // Breakdown
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
@@ -73,14 +71,11 @@ class _WalletScreenState extends State<WalletScreen> {
               ),
             ),
             SizedBox(height: 32.h),
-            // Action Buttons
             Row(
               children: [
                 Expanded(
                   child: ElevatedButton.icon(
-                    onPressed: () {
-                      // Navigate to deposit
-                    },
+                    onPressed: () {},
                     icon: Icon(Icons.add_circle_outline, size: 20.sp),
                     label: Text('Deposit', style: TextStyle(fontSize: 14.sp)),
                     style: ElevatedButton.styleFrom(
@@ -92,9 +87,7 @@ class _WalletScreenState extends State<WalletScreen> {
                 SizedBox(width: 16.w),
                 Expanded(
                   child: ElevatedButton.icon(
-                    onPressed: () {
-                      // Navigate to withdraw
-                    },
+                    onPressed: () {},
                     icon: Icon(Icons.remove_circle_outline, size: 20.sp),
                     label: Text('Withdraw', style: TextStyle(fontSize: 14.sp)),
                     style: ElevatedButton.styleFrom(
@@ -106,7 +99,6 @@ class _WalletScreenState extends State<WalletScreen> {
               ],
             ),
             SizedBox(height: 32.h),
-            // Transaction History
             Align(
               alignment: Alignment.centerLeft,
               child: Text(

@@ -13,8 +13,8 @@ class GameScreen extends StatefulWidget {
 class _GameScreenState extends State<GameScreen> {
   int diceValue = 0;
   bool isRolling = false;
-  int currentTurnPlayerId = 1; // Demo
-  int myPlayerId = 1; // Demo
+  int currentTurnPlayerId = 1;
+  int myPlayerId = 1;
 
   void _rollDice() {
     setState(() => isRolling = true);
@@ -44,7 +44,6 @@ class _GameScreenState extends State<GameScreen> {
       ),
       body: Column(
         children: [
-          // Game Board
           Expanded(
             child: Container(
               color: AppColors.gray100,
@@ -80,7 +79,6 @@ class _GameScreenState extends State<GameScreen> {
               ),
             ),
           ),
-          // Dice and Controls
           Container(
             padding: EdgeInsets.all(20.w),
             decoration: BoxDecoration(
@@ -91,7 +89,6 @@ class _GameScreenState extends State<GameScreen> {
             ),
             child: Column(
               children: [
-                // Status
                 Text(
                   isMyTurn ? '🎮 Your Turn' : '⏳ Opponent\'s Turn',
                   style: TextStyle(
@@ -101,7 +98,6 @@ class _GameScreenState extends State<GameScreen> {
                   ),
                 ),
                 SizedBox(height: 16.h),
-                // Dice
                 GestureDetector(
                   onTap: isMyTurn && !isRolling ? _rollDice : null,
                   child: Container(
@@ -145,7 +141,6 @@ class _GameScreenState extends State<GameScreen> {
                   style: TextStyle(fontSize: 12.sp, color: AppColors.gray400),
                 ),
                 SizedBox(height: 20.h),
-                // Forfeit Button
                 SizedBox(
                   width: double.infinity,
                   child: ElevatedButton(
@@ -153,10 +148,10 @@ class _GameScreenState extends State<GameScreen> {
                       showDialog(
                         context: context,
                         builder: (context) => AlertDialog(
-                          title: Text('Forfeit Game?'),
-                          content: Text('You will lose your entry coins.'),
+                          title: const Text('Forfeit Game?'),
+                          content: const Text('You will lose your entry coins.'),
                           actions: [
-                            TextButton(onPressed: () => Navigator.pop(context), child: Text('Cancel')),
+                            TextButton(onPressed: () => Navigator.pop(context), child: const Text('Cancel')),
                             TextButton(
                               onPressed: () {
                                 Navigator.pop(context);
